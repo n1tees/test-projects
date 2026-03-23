@@ -1,0 +1,224 @@
+{
+  "info": {
+    "_postman_id": "c57f7c74-49af-4ccf-9ad4-f8fd8007f6a1",
+    "name": "Kaspersky Report API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Коллекция для проверки загрузки txt и получения результата анализа target_lemma."
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "target_lemma",
+      "value": "житель"
+    },
+    {
+      "key": "analysis_id",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Upload test_06 (100 lines)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "const data = pm.response.json();",
+              "if (data.id) {",
+              "    pm.collectionVariables.set('analysis_id', data.id);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "data/test/test_06.txt"
+            },
+            {
+              "key": "target_lemma",
+              "value": "{{target_lemma}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/public/report/export",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "public",
+            "report",
+            "export"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload test_07 (200 lines)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "data/test/test_07.txt"
+            },
+            {
+              "key": "target_lemma",
+              "value": "{{target_lemma}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/public/report/export",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "public",
+            "report",
+            "export"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload test_08 (300 lines)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "data/test/test_08.txt"
+            },
+            {
+              "key": "target_lemma",
+              "value": "{{target_lemma}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/public/report/export",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "public",
+            "report",
+            "export"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload test_09 (400 lines)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "data/test/test_09.txt"
+            },
+            {
+              "key": "target_lemma",
+              "value": "{{target_lemma}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/public/report/export",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "public",
+            "report",
+            "export"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload test_10 (500 lines)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "data/test/test_10.txt"
+            },
+            {
+              "key": "target_lemma",
+              "value": "{{target_lemma}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/public/report/export",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "public",
+            "report",
+            "export"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get status or xlsx",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/public/report/{{analysis_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "public",
+            "report",
+            "{{analysis_id}}"
+          ]
+        }
+      }
+    }
+  ]
+}

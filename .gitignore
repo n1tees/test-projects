@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+backend/.venv/
+
+# Test/cache artifacts
+.pytest_cache/
+
+# Runtime data
+backend/data/analysis.db
+backend/data/uploads/*.txt
+backend/data/reports/*.xlsx

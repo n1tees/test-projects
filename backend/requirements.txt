@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pymorphy3
+pymorphy3-dicts-ru
+openpyxl
+pytest
+httpx
+
