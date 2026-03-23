@@ -21,7 +21,7 @@
   ],
   "item": [
     {
-      "name": "Upload test_06 (100 lines)",
+      "name": "Upload test_01",
       "event": [
         {
           "listen": "test",
@@ -48,7 +48,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "data/test/test_06.txt"
+              "src": "data/test/test_01.txt"
             },
             {
               "key": "target_lemma",
@@ -59,19 +59,13 @@
         },
         "url": {
           "raw": "{{base_url}}/public/report/export",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "public",
-            "report",
-            "export"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["public", "report", "export"]
         }
       }
     },
     {
-      "name": "Upload test_07 (200 lines)",
+      "name": "Upload test_02",
       "request": {
         "method": "POST",
         "header": [],
@@ -81,7 +75,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "data/test/test_07.txt"
+              "src": "data/test/test_02.txt"
             },
             {
               "key": "target_lemma",
@@ -92,19 +86,13 @@
         },
         "url": {
           "raw": "{{base_url}}/public/report/export",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "public",
-            "report",
-            "export"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["public", "report", "export"]
         }
       }
     },
     {
-      "name": "Upload test_08 (300 lines)",
+      "name": "Upload test_03",
       "request": {
         "method": "POST",
         "header": [],
@@ -114,7 +102,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "data/test/test_08.txt"
+              "src": "data/test/test_03.txt"
             },
             {
               "key": "target_lemma",
@@ -125,19 +113,13 @@
         },
         "url": {
           "raw": "{{base_url}}/public/report/export",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "public",
-            "report",
-            "export"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["public", "report", "export"]
         }
       }
     },
     {
-      "name": "Upload test_09 (400 lines)",
+      "name": "Upload test_04",
       "request": {
         "method": "POST",
         "header": [],
@@ -147,7 +129,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "data/test/test_09.txt"
+              "src": "data/test/test_04.txt"
             },
             {
               "key": "target_lemma",
@@ -158,19 +140,13 @@
         },
         "url": {
           "raw": "{{base_url}}/public/report/export",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "public",
-            "report",
-            "export"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["public", "report", "export"]
         }
       }
     },
     {
-      "name": "Upload test_10 (500 lines)",
+      "name": "Upload test_05",
       "request": {
         "method": "POST",
         "header": [],
@@ -180,7 +156,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "data/test/test_10.txt"
+              "src": "data/test/test_05.txt"
             },
             {
               "key": "target_lemma",
@@ -191,14 +167,8 @@
         },
         "url": {
           "raw": "{{base_url}}/public/report/export",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "public",
-            "report",
-            "export"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["public", "report", "export"]
         }
       }
     },
@@ -209,14 +179,8 @@
         "header": [],
         "url": {
           "raw": "{{base_url}}/public/report/{{analysis_id}}",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "public",
-            "report",
-            "{{analysis_id}}"
-          ]
+          "host": ["{{base_url}}"],
+          "path": ["public", "report", "{{analysis_id}}"]
         }
       }
     }
